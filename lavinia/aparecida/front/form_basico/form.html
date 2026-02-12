@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro de usuário</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-user-plus"></i>
+                <h1>Cadastro de Usuário</h1>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <form class="form-cadastro" id="formCadastro">
+                <div class="form-group">
+                    <label for="nome">
+                        <i class="fas fa-user"></i>
+                        Nome completo
+                    </label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                    <div class="error-message" id="nomeError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i>
+                        E-mail
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">
+                        <i class="fas fa-lock"></i>
+                        Senha
+                    </label>
+                    <input type="password" id="senha" name="senha" placeholder="Crie uma senha segura" required>
+                    <div class="error-message" id="senhaError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmarSenha">
+                        <i class="fas fa-lock"></i>
+                        Confirmar senha
+                    </label>
+                    <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Repita a senha" required>
+                    <div class="error-message" id="confirmarSenhaError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">
+                        <i class="fas fa-phone"></i>
+                        Telefone
+                    </label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">
+                        Concordo com os 
+                        <a href="#" class="link">Termos de Serviço</a> 
+                        e 
+                        <a href="#" class="link">Política de Privacidade</a>
+                    </label>
+                    <div class="error-message" id="termosError"></div>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-user-check"></i>
+                    Criar Conta
+                </button>
+            </form>
+        </main>
+
+    </div>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Cadastro realizado com sucesso!</h2>
+            <p>Seus dados foram registrados em nosso sistema.</p>
+            <button class="btn-modal" id="closeModal">Continuar</button>
+        </div>
+    </div>
+
+    <script src="js/form.js"></script>
+</body>
+</html>

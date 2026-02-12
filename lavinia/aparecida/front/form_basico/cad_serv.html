@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro de serviço</title>
+    <link rel="stylesheet" href="css/cad_serv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-tools"></i> Cadastro de Serviço</h1>
+        </header>
+        
+        <main class="main-content">
+            <form id="form-servico" class="form-cadastro">
+                <div class="form-group">
+                    <label for="nome-servico"><i class="fas fa-pen"></i> Nome do Serviço</label>
+                    <input type="text" id="nome-servico" placeholder="Ex: Manutenção de Computador" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="categoria"><i class="fas fa-tags"></i> Categoria</label>
+                    <select id="categoria" required>
+                        <option value="" disabled selected>Selecione uma categoria</option>
+                        <option value="tecnologia">Tecnologia</option>
+                        <option value="consultoria">Consultoria</option>
+                        <option value="manutencao">Manutenção</option>
+                        <option value="design">Design</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="descricao"><i class="fas fa-align-left"></i> Descrição</label>
+                    <textarea id="descricao" rows="4" placeholder="Descreva detalhadamente o serviço..." required></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="preco"><i class="fas fa-dollar-sign"></i> Preço (R$)</label>
+                        <input type="number" id="preco" min="0" step="0.01" placeholder="0,00" required>
+                    </div>
+                    
+                    <div class="form-group half">
+                        <label for="duracao"><i class="fas fa-clock"></i> Duração Estimada</label>
+                        <input type="text" id="duracao" placeholder="Ex: 2 horas, 1 dia" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-check-circle"></i> Status do Serviço</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="status" value="ativo" checked>
+                            <span class="radio-custom"></span>
+                            Ativo
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="status" value="inativo">
+                            <span class="radio-custom"></span>
+                            Inativo
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="observacoes"><i class="fas fa-sticky-note"></i> Observações (Opcional)</label>
+                    <textarea id="observacoes" rows="3" placeholder="Informações adicionais sobre o serviço..."></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-save"></i> Cadastrar Serviço
+                    </button>
+                    <button type="button" class="btn-reset" id="btn-limpar">
+                        <i class="fas fa-broom"></i> Limpar Formulário
+                    </button>
+                </div>
+            </form>
+            
+            <section class="servicos-cadastrados">
+                <h2><i class="fas fa-list"></i> Serviços Cadastrados</h2>
+                <div id="lista-servicos">
+                    <!-- Lista de serviços será gerada aqui via JavaScript -->
+                    <p class="empty-list">Nenhum serviço cadastrado ainda.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="js/cad_serv.js"></script>
+</body>
+</html>
