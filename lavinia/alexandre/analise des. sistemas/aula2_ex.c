@@ -9,8 +9,16 @@
 // e - escrever seu nome
 
 int main(){
-    int x = ;
+    int numero = 10;
     float pi = 3.14;
-    char letra = 'A';
-    bool verdadeiroefalso = true;
+    char letra = 'L';
+    bool gato = true;
+    
+    printf("numero %d\n", numero);
+    printf("float %f\n", pi);
+    printf("melhor letra do alfabeto %c\n", letra);
+    printf("gato %d\n", gato);
+    
+    return 0;
 }
+
