@@ -1,0 +1,29 @@
+create database escola;
+
+use escola;
+
+create table escola (
+	id_escola int not null auto_increment primary key
+);
+
+create table aluno (
+	id_aluno int not null auto_increment primary key,
+    nome varchar(255) not null,
+    email varchar(255) not null unique,
+    matricula varchar(45) not null unique,
+    dt_nasc date not null
+);
+
+create table curso (
+	id_curso int not null auto_increment primary key,
+    nome varchar(255) not null unique,
+    codigo varchar(255) not null unique,
+    crg_hr varchar(255) not null
+);
+
+create table matricula (
+	id_mt int not null auto_increment primary key,
+    aluno varchar(255) not null,
+    dt_mt date not null,
+    situacao varchar(45) not null
+);

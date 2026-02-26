@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/escola/lavinia/alexandre",
-      "program": "c:/Users/escola/lavinia/alexandre/build/Debug/outDebug",
+      "cwd": "c:/Users/escola/lavinia_escola/lavinia/alexandre/analise des. sistemas",
+      "program": "c:/Users/escola/lavinia_escola/lavinia/alexandre/analise des. sistemas/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

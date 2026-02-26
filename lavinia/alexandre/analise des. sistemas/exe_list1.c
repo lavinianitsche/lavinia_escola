@@ -30,17 +30,97 @@ int main(){
     printf("sua idade : %d\n", idade);
     printf("sua altura : %.2f\n", altura);
     
+
+
     printf("\nexercicio 2\n");
     int x = 10, y = 5;
     int somar = x + y;
     printf("%d + %d = %d\n", x, y, somar);
-    printf("soma = %d\n", x + y); 
+    printf("soma = %d\n", x + y);
+
+
 
     printf("\nexercicio 3\n");
-    float x = 3.14, y = 1.86;
-    float menos = x - y;
-    printf("%f - %f = %f\n", x, y, menos);
-    printf("subtracao = %f\n", x - y);
+    float one = 3.14, two = 1.86;
+    float menos = one - two;
+    printf("%f - %f = %f\n", one, two, menos);
+    printf("subtracao = %f\n", one - two);
+
+
+
+    printf("\nexercicio 4\n");
+    int um = 2, dois = 4;
+    int mult = um * dois;
+    printf("%d * %d = %d\n", um, dois, mult);
+    printf("multiplicacao = %d\n", um * dois);
+
+
+
+    printf("\nexercicio 5\n");
+    float a = 4.4, b = 2.2;
+    float div = a / b;
+    printf("%f / %f = %f\n", a, b, div);
+    printf("divisao = %f\n", a / b);
+
+
+
+    printf("\nexercicio 6\n");
+    int numero = 2;
+    int dobro = numero * 2;
+    printf("%d * %d = %d\n", numero, 2, dobro);
+    printf("dobro = %d\n", numero * 2);
+
+
+
+    printf("\nexercicio 7\n");
+    char letter = 'L';
+    printf("melhor letra do alfabeto: %c\n", letter);
+
+
+
+    printf("\nexercicio 8\n");
+    float num = 33.5;
+    float soma = num + 10.5;
+    printf("%f / %f = %f\n", num, 10.5, soma);
+    printf("resultado = %f\n", num + 10.5);
+
+
+
+    printf("\nexercicio 9\n");
+    int A = 9, B = 6, C = 8, D = 4;
+    int plus = A + B + C + D;
+    int media = plus / 4;
+    printf("%d + %d + %d + %d = %d\n", A, B, C, D, plus);
+    printf("%d / %d = %d\n", plus, 4, media);
+    printf("media = %d\n", plus / 4);
+
+
+
+    printf("\nexercicio 10\n");
+    int uno, due;
+    int sub = uno - due;
+    printf("digite um numero: ");
+    scanf(" %d", &uno);
+    printf("digite outro numero: ");
+    scanf(" %d", &due);
+    printf("subtracao = %d\n", uno - due);
+
+
+
+    printf("\nexercicio 11\n");
+    int number = 5;
+    printf("\ntabuada do 5\n");
+
+    printf("5 * 1 = %d\n", number * 1);
+    printf("5 * 2 = %d\n", number * 2);
+    printf("5 * 3 = %d\n", number * 3);
+    printf("5 * 4 = %d\n", number * 4);
+    printf("5 * 5 = %d\n", number * 5);
+    printf("5 * 6 = %d\n", number * 6);
+    printf("5 * 7 = %d\n", number * 7);
+    printf("5 * 8 = %d\n", number * 8);
+    printf("5 * 9 = %d\n", number * 9);
+    printf("5 * 10 = %d\n", number * 10);
 
     return 0;
 }
