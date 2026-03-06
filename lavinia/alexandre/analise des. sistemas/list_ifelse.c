@@ -43,7 +43,7 @@ idoso maior que 60.*/
 
 int main(){
 
-    /*printf("exemplo\n");
+    printf("exemplo\n");
     int idade;
     printf("insira sua idade: ");
     scanf("%d", &idade);
@@ -167,14 +167,12 @@ int main(){
         printf("menor que zero\n");
     } else {
         printf("igual a zero\n");
-    }*/
+    }
 
 
 
     printf("\nexercicio 8\n");
     int A , B, C, D;
-    int soma = A + B + C + D;
-    int media = soma / 4;
     printf("digite um numero: ");
     scanf(" %d", &A);
     printf("digite um numero: ");
@@ -183,16 +181,48 @@ int main(){
     scanf(" %d", &C);
     printf("digite um numero: ");
     scanf(" %d", &D);
-    printf("%d + %d + %d + %d = %d\n", A, B, C, D, soma);
-    printf("%d / %d = %d\n", soma, 4, media);
-    printf("media = %d\n", soma / 4);
-    if (media <= 6){
+
+    int soma = A + B + C + D;
+    float media = (float)soma / 4;
+
+    printf("media = %.2f\n", media);
+
+    if (media < 6){
         printf("reprovado");
+    } else if (media >= 6 && media <= 7){
+        printf("exame");
     } else {
         printf("aprovado");
     }
     
 
+
+    printf("\nexercicio 9\n");
+    int numero;
+    printf("digite um numero: ");
+    scanf(" %d", &numero);
+
+    if (numero % 2 == 0){
+        printf("par");
+    } else {
+        printf("impar");
+    }
+    
+
+
+    printf("\nexercicio 10\n");
+    int age;
+    printf("insira sua idade: ");
+    scanf("%d", &age);
+    if (age > 0 && age <= 17){
+        printf("crianca\n");
+    } else if (age < 0){
+        printf("idade invalida");
+    } else if (age > 17 && age <= 59){
+        printf("adulto");
+    } else {
+        printf("idoso");
+    }
 
     return 0;
 }
