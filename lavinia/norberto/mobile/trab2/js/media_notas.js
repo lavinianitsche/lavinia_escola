@@ -29,6 +29,3 @@ function calcular() {
 
 }
 
-function continuar() {
-    
-}
