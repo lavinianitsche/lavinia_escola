@@ -5,6 +5,7 @@ function calcular() {
     let tri_um;
     let tri_dois;
     let tri_tres;
+    let resposta;
 
     nome = document.getElementById("nome").value;
     console.log("aluno: " + nome);
@@ -33,4 +34,15 @@ function calcular() {
     console.log("media final: " + media.toFixed(0));
     console.log(situacao);
 
+    resposta = document.getElementById("resposta").value;
+
+    if (resposta == "sim"){
+        console.log(resposta[0]);
+    } else {
+        console.log(resposta[0]);
+    }
+
+    while (resposta){
+
+    }
 }
