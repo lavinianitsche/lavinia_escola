@@ -42,7 +42,4 @@ function calcular() {
         console.log(resposta[0]);
     }
 
-    while (resposta){
-
-    }
 }

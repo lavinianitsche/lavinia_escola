@@ -30,7 +30,7 @@ int main() {
 
     printf("\nexercicio 3\n");
     int op;
-    float soma, sub, mult, div, sair;
+    float um, dois;
 
     printf("operaçoes:\n");
     printf("1 - soma\n");
@@ -39,24 +39,52 @@ int main() {
     printf("4 - divisao\n");
     printf("5 - sair\n");
 
-    printf("digite o numero da forma: \n");
+    printf("digite o numero: \n");
     scanf("%d", &op);
 
     while (op != 5)
     {
         switch (op)
         {
-        case 1:
-            // printf("1 - soma\n");
-            // printf("digite o primeiro numero: \n");
-            // scanf("%f");
-            // printf("area: %.2f\n", lado * lado);
-            // printf("perimetro: %.2f\n", 4 * lado);
-            // break;
-        
-        default:
-            break;
-        }
+            case 1:
+                printf("1 - soma\n");
+                printf("digite o primeiro numero: \n");
+                scanf("%f", &um);
+                printf("digite o segundo numero: \n");
+                scanf("%f", &dois);
+                printf("soma: %.2f", um + dois);
+                break;
+                
+            case 2:
+                printf("2 - subtracao\n");
+                printf("digite o primeiro numero: \n");
+                scanf("%f", &um);
+                printf("digite o segundo numero: \n");
+                scanf("%f", &dois);
+                printf("soma: %.2f", um - dois);
+                break;
+
+            case 3:
+                printf("3 - multiplicacao\n");
+                printf("digite o primeiro numero: \n");
+                scanf("%f", &um);
+                printf("digite o segundo numero: \n");
+                scanf("%f", &dois);
+                printf("soma: %.2f", um * dois);
+                break;
+
+            case 4:
+                printf("4 - divisao\n");
+                printf("digite o primeiro numero: \n");
+                scanf("%f", &um);
+                printf("digite o segundo numero: \n");
+                scanf("%f", &dois);
+                printf("soma: %.2f", um / dois);
+                break;
+
+            default:
+                break;
+            }
     }
 
 
