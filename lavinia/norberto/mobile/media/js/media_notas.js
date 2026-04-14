@@ -37,7 +37,7 @@ function calcular() {
 
         resposta = document.getElementById("resposta").value;
 
-        if (resposta == "sim"){
+        if (resposta == "s"){
             console.log(resposta[0]);
         } else {
             console.log(resposta[0]);
