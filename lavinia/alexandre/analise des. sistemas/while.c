@@ -2,7 +2,7 @@
 
 int main() {
     
-    /*printf("\nexercicio 1\n");
+    printf("\nexercicio 1\n");
     int num = 0;
     printf("digite um numero\n");
     scanf("%d", &num);
@@ -14,6 +14,9 @@ int main() {
     }
 
     printf("\ncontagem regressiva concluida\n");
+
+
+
 
     printf("\nexercicio 2\n");
     int numero;
@@ -27,6 +30,9 @@ int main() {
     }
 
     printf("soma dos numeros positivos: %d\n", soma);
+
+
+
 
     printf("\nexercicio 3\n");
     int op;
@@ -90,6 +96,9 @@ int main() {
 
     }
 
+
+
+
     printf("\nexercicio 4\n");
     int senha;
     
@@ -103,6 +112,8 @@ int main() {
     printf("acesso permitido");
 
 
+
+
     printf("\nexercicio 5\n");
     int nota;
 
@@ -114,16 +125,18 @@ int main() {
     printf("nota registrada");
 
 
+
+
     printf("\nexercicio 6\n");
     int media;
-    int nota;
+    int nota1;
     int contador = 0;
     char resposta;
-    float soma = 0;
+    float somaa = 0;
 
     printf("digite a primeira nota: ");
-    scanf("%d", &nota);
-    soma = soma + nota;
+    scanf("%d", &nota1);
+    somaa = somaa + nota1;
     contador = contador + 1;
 
     printf("deseja adicionar mais notas? s/n: ");
@@ -133,8 +146,8 @@ int main() {
     while (resposta == 's'){
         
         printf("digite a proxima nota: ");
-        scanf("%d", &nota);
-        soma = soma + nota;
+        scanf("%d", &nota1);
+        somaa = somaa + nota1;
         contador = contador + 1;
 
         printf("deseja adicionar mais notas? s/n: ");
@@ -143,11 +156,14 @@ int main() {
     }
 
     if (contador > 0) {
-        media = soma / contador;
+        media = somaa / contador;
         printf("media das %d notas: %d\n", contador, media);
     } else {
         printf("nenhuma nota foi digitada.\n");
     }
+
+
+
 
     printf("\nexercicio 7\n");
     int number;
@@ -175,19 +191,100 @@ int main() {
         printf("%d NAO e um numero primo.\n", number);
     }
            
+
+
+
     printf("\nexercicio 8\n");
-    int number;
+    int numbero;
     printf("digite um numero (0 para parar): ");
-    scanf(" %d", &number);
+    scanf(" %d", &numbero);
     
-    while (number != 0){
+    while (numbero != 0){
         
-    (number % 2 == 0 ? printf("par\n") : printf("impar\n"));
+    (numbero % 2 == 0 ? printf("par\n") : printf("impar\n"));
     
     printf("digite um numero: ");
-    scanf(" %d", &number);
-    }*/
+    scanf(" %d", &numbero);
+    }
+
+
+
+
+    printf("\nexercicio 9\n");
+
+    int valor;
+    char continuar;
+    int notas100, notas50, notas20, notas10;
+
+    do {
+        printf("Digite o valor do saque (entre 10 e 1000, notas disponiveis: 10, 20, 50, 100): ");
+        scanf("%d", &valor);
+    
+    if (valor < 10 || valor > 1000 || valor % 10 != 0) {
+        printf("Valor invalido!\n");
+    } else {
+        notas100 = valor / 100;
+        valor = valor % 100;
+        
+        notas50 = valor / 50;
+        valor = valor % 50;
+        
+        notas20 = valor / 20;
+        valor = valor % 20;
+        
+        notas10 = valor / 10;
+        
+        printf("\nNotas fornecidas:\n");
+        if (notas100 > 0) printf("%d nota(s) de R$ 100\n", notas100);
+        if (notas50 > 0) printf("%d nota(s) de R$ 50\n", notas50);
+        if (notas20 > 0) printf("%d nota(s) de R$ 20\n", notas20);
+        if (notas10 > 0) printf("%d nota(s) de R$ 10\n", notas10);
+    }
+    
+    printf("\nDeseja fazer outro saque? (s/n): ");
+    scanf(" %c", &continuar);
+    
+    switch (continuar) {
+        case 's':
+            printf("\n--- Novo saque ---\n");
+            break;
+        case 'n':
+            printf("Programa encerrado. Obrigado!\n");
+            break;
+        default:
+            printf("Opcao invalida! Programa encerrado.\n");
+            continuar = 'n';
+            break;
+    }
+    
+    } while (continuar == 's');
+
+
+
+
+    printf("\nexercicio 10\n");
+    int numeros;
+    int palpite;
+    
+    srand(time(NULL));
+    numeros = rand() % 100 + 1;
+    
+    while (palpite != numeros){
+        printf("digite seu palpite: ");
+        scanf("%d", &palpite);
+        
+        if (palpite > numeros){
+            printf("menor!\n");
+        } else if (palpite < numeros){
+            printf("maior!\n");
+        }
+    }
+    
+    printf("acertou!");
+
    
+
+
     printf("\nexercicio 11\n");
     int n = 1;
     int tabuada;
@@ -207,6 +304,67 @@ int main() {
         scanf(" %c", &opcao);
 
     } while (opcao == 's');
+
+
+
+
+    printf("\nexercicio 12\n");
+    int opcaao;
+    float temperatura, convertida;
+    
+    while (1) {
+        printf("\nmenu de conversao de temperatura\n");
+        printf("1. converter celsius para fahrenheit\n");
+        printf("2. converter fahrenheit para celsius\n");
+        printf("3. sair\n");
+        printf("escolha uma opcao (1-3): ");
+        scanf("%d", &opcao);
+        
+        switch(opcao) {
+            case 1:
+                printf("\nDigite a temperatura em Celsius: ");
+                scanf("%f", &temperatura);
+                convertida = (temperatura * 9.0/5.0) + 32;
+                printf("%.2f graus Celsius = %.2f graus Fahrenheit\n", temperatura, convertida);
+                break;
+                
+            case 2:
+                printf("\nDigite a temperatura em Fahrenheit: ");
+                scanf("%f", &temperatura);
+                convertida = (temperatura - 32) * 5.0/9.0;
+                printf("%.2f graus Fahrenheit = %.2f graus Celsius\n", temperatura, convertida);
+                break;
+                
+            case 3:
+                printf("\nPrograma encerrado.\n");
+                return 0;
+                
+            default:
+                printf("\nOpcao invalida!\n");
+                break;
+        }
+    
+
+
+    }
+
+
+
+    
+    printf("\nexercicio 13\n");
+    int no, contar = 0;
+    long a = 0, b = 1, prox;
+
+    printf("digite quantos numeros da sequencia de fibonacci voce quer ver: ");
+    scanf("%d", &no);
+
+    while (contar < no) {
+        printf("%ld ", a);
+        prox = a + b;
+        a = b;
+        b = prox;
+        contar++;
+    }
 
     return 0;
 }
