@@ -61,7 +61,6 @@ function calcular() {
 
     } while (continuar == 's');
 
-    // copiar if (foto na galeria)
     if (continuar === "n") {
         const tabela = document.createElement("p");
         tabela.style.color = "red";

@@ -24,7 +24,7 @@ function calcular() {
     //incrementamos o contador para que o proximo aluno use a mesma posição
     contador++
 
-    
+
 
     do { // inicio do.. while
 
@@ -70,5 +70,15 @@ function calcular() {
 
     } while (continuar == 's');
 
-    // copiar if (foto na galeria)
+    if (continuar === "n") {
+        const tabela = document.createElement("p");
+        tabela.style.color = "red";
+        tabela.innerText = "status: turma finalizada.";
+        document.body.appendChild(tabela);
+        nome.value = "";
+        tri_um.value = "";
+        tri_dois.value = "";
+        tri_tres.value = "";
+        resposta.value = ""; 
+    }
 }
