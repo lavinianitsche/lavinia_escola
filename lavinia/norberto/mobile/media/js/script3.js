@@ -1,24 +1,33 @@
+// vetores e contador declarados fora para preservar dados
+const nomes = [];
+const medias = [];
+let contador = 0; // o "ponteiro" que indica a posição atual
+
 function calcular() {
     
+    // referencias e capturas
     const nome  = document.getElementById("nome");
     const tri_um = document.getElementById("notau");
     const tri_dois = document.getElementById("notad");
     const tri_tres = document.getElementById("notat");
     const resposta = document.getElementById("resposta");
     
-    let continuar;
+    let t1 = parseFloat(tri_um.value) || 0; // parseFloat converte texto para numero real
+    let t2 = parseFloat(tri_dois.value) || 0;
+    let t3 = parseFloat(tri_tres.value) || 0;
+    
+    // calculo e atribuição classica
+    // ao inves de push(), usamos o indice inteiro
+    nomes[contador] = nome.value;
+    medias[contador] = ((t1 + t2 + t3) / 3).toFixed(2);
+
+    //incrementamos o contador para que o proximo aluno use a mesma posição
+    contador++
+
+    
 
     do { // inicio do.. while
 
-        // valores atuais do input
-        let name = nome.value;
-        console.log("aluno: " + nome.value);
-        let t1 = parseFloat(tri_um.value); // parseFloat converte texto para numero real
-        console.log("1º tri: " + tri_um.value);
-        let t2 = parseFloat(tri_dois.value);
-        console.log("2º tri: " + tri_dois.value);
-        let t3 = parseFloat(tri_tres.value);
-        console.log("3º tri: " + tri_tres.value);
 
         if (isNaN(t1) || isNaN(t2) || isNaN(t3)) {
             alert("por favor, preencha todas as notas corretamente!");
@@ -62,15 +71,4 @@ function calcular() {
     } while (continuar == 's');
 
     // copiar if (foto na galeria)
-    if (continuar === "n") {
-        const tabela = document.createElement("p");
-        tabela.style.color = "red";
-        tabela.innerText = "status: turma finalizada.";
-        document.body.appendChild(tabela);
-        nome.value = "";
-        tri_um.value = "";
-        tri_dois.value = "";
-        tri_tres.value = "";
-        resposta.value = ""; 
-    }
 }
