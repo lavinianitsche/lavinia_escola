@@ -201,5 +201,7 @@ int main() {
     
     printf("string invertida: %s\n", text);
 
+    // finalmenteeee
+
     return 0;
 }
