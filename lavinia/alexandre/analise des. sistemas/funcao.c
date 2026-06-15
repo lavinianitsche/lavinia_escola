@@ -126,12 +126,12 @@ float hexagono(float l) {
 }
 
 // exercicio 8
-void quadrado() { 
+void quadradoo() { 
     float l; printf("Lado: "); 
     scanf("%f", &l); 
     printf("Perimetro: %.2f\n", 4*l); 
 }
-void retangulo() { 
+void retanguloo() { 
     float b, a; 
     printf("Base: "); 
     scanf("%f", &b); 
@@ -139,19 +139,19 @@ void retangulo() {
     scanf("%f", &a); 
     printf("Perimetro: %.2f\n", 2*(b+a)); 
 }
-void circulo() { 
+void circuloo() { 
     float r; 
     printf("Raio: "); 
     scanf("%f", &r); 
     printf("Perimetro: %.2f\n", 2*3.14159*r); 
 }
-void triangulo() { 
+void trianguloo() { 
     float l; 
     printf("Lado: "); 
     scanf("%f", &l); 
     printf("Perimetro: %.2f\n", 3*l); 
 }
-void trapezio() { 
+void trapezioo() { 
     float bM, bm, l1, l2; 
     printf("Base maior: "); 
     scanf("%f", &bM); 
@@ -163,13 +163,13 @@ void trapezio() {
     scanf("%f", &l2); 
     printf("Perimetro: %.2f\n", bM+bm+l1+l2); 
 }
-void losango() { 
+void losangoo() { 
     float l; 
     printf("Lado: "); 
     scanf("%f", &l); 
     printf("Perimetro: %.2f\n", 4*l); 
 }
-void hexagono() { 
+void hexagonoo() { 
     float l; 
     printf("Lado: "); 
     scanf("%f", &l); 
@@ -360,20 +360,20 @@ int main() {
 
 
     printf("\nexercicio 8\n");
-    int op;
+    int opp;
     do {
         printf("\n1-Quadrado 2-Retangulo 3-Circulo 4-Triangulo 5-Trapezio 6-Losango 7-Hexagono 8-Sair\nOpcao: ");
-        scanf("%d", &op);
-        if(op==1) quadrado();
-        else if(op==2) retangulo();
-        else if(op==3) circulo();
-        else if(op==4) triangulo();
-        else if(op==5) trapezio();
-        else if(op==6) losango();
-        else if(op==7) hexagono();
-        else if(op==8) printf("Saindo...\n");
+        scanf("%d", &opp);
+        if(opp==1) quadradoo();
+        else if(opp==2) retanguloo();
+        else if(opp==3) circuloo();
+        else if(opp==4) trianguloo();
+        else if(opp==5) trapezioo();
+        else if(opp==6) losangoo();
+        else if(opp==7) hexagonoo();
+        else if(opp==8) printf("Saindo...\n");
         else printf("Opcao invalida!\n");
-    } while(op!=8);
+    } while(opp!=8);
 
 
 
